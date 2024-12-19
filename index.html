@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>GymFluencer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="logo.svg" alt="" class="nav-logo" />
+        <!-- Small logo -->
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="dropdown">
+            <a href="#">Our Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="workout.html">Workout Plan</a></li>
+              <li><a href="#">Diet Plan</a></li>
+            </ul>
+          </li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#blogsec">Blogs</a></li>
+          <li><a href="#faq">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="join-btn">Join us now</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="trusted">
+        <img src="trusteduser.png" alt="Users" /><img
+          src="trusteduser2.png"
+          alt="Users"
+        />
+
+        Trusted by 3+ million users
+      </div>
+      <h1>Track Your Fitness Journey</h1>
+      <p>
+        Discover the ultimate fitness companion with GymFluencer. Effortlessly
+        log your workouts, count reps, and track calories burned. Stay motivated
+        and achieve your goals with ease.
+      </p>
+
+      <div class="text-scroller">
+        <div class="text-line">
+          <p class="text-blue">
+            Fitness / Transformation / Motivation / Progress
+          </p>
+        </div>
+        <div class="text-line">
+          <p class="text-orange">Progress / Work / Community / Strength</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- YOUR FITNESS. OUR MISSION. Section -->
+    <section class="mission" id="about">
+      <h2>YOUR FITNESS.</h2>
+      <h2>OUR MISSION.</h2>
+      <p><br /></p>
+      <p>
+        At GymFluencer, our mission is simple: to provide the tools and support
+        you need to reach your fitness goals. We combine innovative technology
+        with personalized guidance to make fitness easier, more accessible, and
+        more motivating. Join us as we help you transform your fitness journey,
+        one workout at a time.
+      </p>
+      <div class="stats">
+        <div class="stat">
+          <h3 class="count-up" data-target="463">0k+</h3>
+          <p>Workouts logged and progress tracked every month</p>
+        </div>
+        <div class="stat">
+          <h3 class="count-up" data-target="163">0k+</h3>
+          <p>Fitness enthusiasts connected through our platform</p>
+        </div>
+        <div class="stat">
+          <h3 class="count-up" data-target="13">0+</h3>
+          <p>Countries where GymFluencer is making an impact</p>
+        </div>
+      </div>
+
+      <p><br /></p>
+      <p><br /></p>
+      <div class="video-thumbnail-wrapper" onclick="openVideo()">
+        <img
+          src="Container.png"
+          alt="Video Thumbnail"
+          class="video-thumbnail"
+        />
+      </div>
+
+      <!-- Modal for YouTube Video -->
+      <div id="videoModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeVideo()">&times;</span>
+          <iframe
+            id="youtubeVideo"
+            width="960"
+            height="540"
+            src=""
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR SERVICES Section -->
+    <section class="services" id="services">
+      <h2>OUR SERVICES</h2>
+      <p>
+        GymFluencer offers 5 essential services to help you<br />achieve your
+        fitness goals with ease and flexibility.
+      </p>
+      <p><br /></p>
+      <p><br /></p>
+      <div class="service-images">
+        <a href="#benefits" class="service-link">
+          <img src="Link.png" alt="Service 1" />
+          <span class="service-text">TRACK</span>
+        </a>
+        <a href="#benefits" class="service-link">
+          <img src="Link1.png" alt="Service 2" />
+          <span class="service-text">ANALYZE</span>
+        </a>
+        <a href="#benefits" class="service-link">
+          <img src="Link2.png" alt="Service 3" />
+          <span class="service-text">TRAIN</span>
+        </a>
+        <a href="#benefits" class="service-link">
+          <img src="Link3.png" alt="Service 4" />
+          <span class="service-text">CONNECT</span>
+        </a>
+        <a href="#benefits" class="service-link">
+          <img src="Link4.png" alt="Service 5" />
+          <span class="service-text">CHALLENGE</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Discover GymFluencer Benefits Section -->
+    <section class="benefits" id="benefits">
+      <div class="star-benefits">
+        <span class="star-symbol"
+          ><i class="far fa-star"></i> Our Benefits</span
+        >
+      </div>
+      <h2>Discover GymFluencer Benefits</h2>
+      <p>
+        Unlock your full potential with GymFluencer, your personal fitness<br />
+        partner for progress and motivation.
+      </p>
+      <div class="container-benefits">
+        <!-- Info Cards on the left -->
+        <div class="info-cards">
+          <div class="info-card">
+            <img src="user.png" />
+            <h3>Effortless Workout Logging</h3>
+            <p>
+              Easily log your workouts and monitor your progress over time with
+              our intuitive logging feature.
+            </p>
+          </div>
+          <div class="info-card">
+            <img src="earth.png" />
+            <h3>Accurate Rep Counting</h3>
+            <p>
+              Count your reps accurately with our app, ensuring consistency and
+              improved performance.
+            </p>
+          </div>
+        </div>
+
+        <!-- Phone Mockup in the center -->
+        <div class="phone-mockup">
+          <img src="phone-mockup.png" alt="Phone Mockup" />
+        </div>
+
+        <!-- Info Cards on the right -->
+        <div class="info-cards">
+          <div class="info-card">
+            <img src="star.png" />
+            <h3>Personalized Workout Plans</h3>
+            <p>
+              AI-powered workout plans tailored to your fitness level, goals,
+              and progress.
+            </p>
+          </div>
+          <div class="info-card">
+            <img src="smiley.png" />
+            <h3>Calorie Calculation & Personalized Diet Plans</h3>
+            <p>
+              Calculate calories burned during workouts and AI-customized meal
+              plans for optimal nutrition and wellness.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- YOUR PERSONALISED FITNESS HUB Section -->
+    <section class="personalized-fitness" id="personalized-fitness">
+      <div class="left-side">
+        <h2>
+          YOUR<br />
+          PERSONALISED<br />
+          FITNESS HUB
+        </h2>
+        <p>
+          Personalized workout routines tailored to your goals and preferences
+        </p>
+        <p>
+          Get expert guidance with virtual coaching sessions, available anytime,
+          anywhere.
+        </p>
+        <p>
+          Track your fitness journey with detailed analytics, goal setting, and
+          achievements
+        </p>
+      </div>
+      <div class="right-side">
+        <div class="carousel-container">
+          <div class="carousel-images">
+            <img src="1.png" alt="Image 1" class="carousel-image" />
+            <img src="2.png" alt="Image 2" class="carousel-image" />
+            <img src="3.png" alt="Image 3" class="carousel-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scrolling Text Section -->
+    <section class="scrolling-text-section">
+      <div
+        class="scrolling-text-container"
+        data-text="• PROGRESS TRACKING FITNESS PLANS • WORKOUT ROUTINES • PROGRESS TRACKING FITNESS PLANS • WORKOUT ROUTINES"
+      >
+        <div class="scrolling-text">
+          PROGRESS TRACKING FITNESS PLANS
+          <span class="dot-icon">•</span> WORKOUT ROUTINES
+          <span class="dot-icon">•</span>PROGRESS TRACKING FITNESS PLANS
+          <span class="dot-icon">•</span> WORKOUT ROUTINES
+          <span class="dot-icon">•</span> PROGRESS TRACKING FITNESS PLANS
+          <span class="dot-icon">•</span> WORKOUT ROUTINES
+          <span class="dot-icon">•</span>PROGRESS TRACKING FITNESS PLANS
+          <span class="dot-icon">•</span> WORKOUT ROUTINES
+        </div>
+      </div>
+    </section>
+
+    <section class="transformations">
+      <h2>TRANSFORMATIONS MADE<br />POSSIBLE WITH GYMFLUENCER</h2>
+      <div class="carousel">
+        <div class="carousel-img">
+          <img src="fit1.png" alt="Transformation 1" />
+          <img src="fit2.png" alt="Transformation 2" />
+          <img src="fit3.png" alt="Transformation 3" />
+        </div>
+        <!-- Left and right arrows for manual navigation -->
+        <button class="carousel-arrow carousel-arrow-left">&#10094;</button>
+        <button class="carousel-arrow carousel-arrow-right">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <h2>WHAT PEOPLE SAY</h2>
+      <div class="reviews-container">
+        <div class="reviews-wrapper">
+          <!-- Review 1 -->
+          <div class="review-box">
+            <img src="rev1.png" alt="User 1" class="review-image" />
+            <div class="review-content">
+              <!-- Star Ratings -->
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <!-- Review Text -->
+              <p class="review-text">
+                "GymFluencer has completely changed my fitness journey.<br />
+                I feel stronger and more motivated every day!"
+              </p>
+              <h4>John Doe</h4>
+              <p class="review-job">~ Fitness Enthusiast</p>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-box">
+            <img src="rev2.png" alt="User 2" class="review-image" />
+            <div class="review-content">
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="review-text">
+                "A fantastic app for tracking workouts!<br />I love the
+                personalized features and easy interface."
+              </p>
+              <h4>Jane Smith</h4>
+              <p class="review-job">~ Fitness Trainer</p>
+            </div>
+          </div>
+          <!-- Review 3 -->
+          <div class="review-box">
+            <img src="rev3.png" alt="User 3" class="review-image" />
+            <div class="review-content">
+              <div class="review-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="review-text">
+                "The best fitness app out there!<br />
+                Highly recommend GymFluencer to anyone."
+              </p>
+              <h4>Alexis Johnson</h4>
+              <p class="review-job">~ Model</p>
+            </div>
+          </div>
+          <!-- Add more reviews as needed -->
+        </div>
+      </div>
+    </section>
+
+    <section class="gym-section">
+      <div class="gym-header">
+        <h1>FIND YOUR NEAREST GYM</h1>
+        <p>
+          Easily discover gyms near your location to kickstart<br />
+          your fitness journey today!
+        </p>
+      </div>
+      <div class="gym-container">
+        <!-- Gym List -->
+        <div class="gym-list">
+          <div class="gym-card">
+            <img src="gym1.png" alt="Gym 1" />
+            <div class="gym-info">
+              <h3>Ozone The Gym</h3>
+              <p>📞 +91 1234567890</p>
+              <p>📍 Nerul, Navi Mumbai</p>
+            </div>
+          </div>
+          <div class="gym-card">
+            <img src="gym2.png" alt="Gym 2" />
+            <div class="gym-info">
+              <h3>The Square Gym</h3>
+              <p>📞 +91 1234567890</p>
+              <p>📍 Nerul, Navi Mumbai</p>
+            </div>
+          </div>
+          <div class="gym-card">
+            <img src="gym3.png" alt="Gym 3" />
+            <div class="gym-info">
+              <h3>Arnolds Total Fitness</h3>
+              <p>📞 +91 1234567890</p>
+              <p>📍 Nerul, Navi Mumbai</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="gym-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.777667011942!2d73.00102281473424!3d19.015700887130825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c1b2a39c44ed%3A0x4f6d2f2121f2148e!2sNerul%2C%20Navi%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1670047109194!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-sec" id="blogsec">
+      <div class="container">
+        <div class="title">OUR LATEST BLOGS</div>
+        <div class="blog-grid">
+          <div class="blog-card large-blog">
+            <img src="blog1.png" alt="Blog Image 1" />
+            <div class="blog-content">
+              <div class="category1">Exercise</div>
+              <div class="blog-title">
+                Conquering Consistency: How to Make Exercise a Habit You Love
+              </div>
+              <div class="blog-meta">
+                <span class="date">
+                  <i class="calendar-icon"></i> Jun 28, 2024
+                </span>
+                <span class="author">
+                  <img src="benjamin.png" alt="Benjamin" class="profile-pic" />
+                  Benjamin
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="small-blogs">
+            <div class="blog-card">
+              <img src="blog2.png" alt="Blog Image 2" />
+              <div class="blog-content">
+                <div class="category2">Weight loss</div>
+                <div class="blog-title">
+                  Weight Loss: A Sustainable Approach for a Healthier You
+                </div>
+                <div class="blog-meta">
+                  <span class="date">
+                    <i class="calendar-icon"></i> Jun 26, 2024
+                  </span>
+                  <span class="author">
+                    <img src="jessica.png" alt="Jessica" class="profile-pic" />
+                    Jessica
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="blog-card">
+              <img src="blog3.png" alt="Blog Image 3" />
+              <div class="blog-content">
+                <div class="category3">Nutrition</div>
+                <div class="blog-title">
+                  Fuel Your Fitness: A Guide to Nutrition for Peak Performance
+                </div>
+                <div class="blog-meta">
+                  <span class="date">
+                    <i class="calendar-icon"></i> Jun 23, 2024
+                  </span>
+                  <span class="author">
+                    <img src="david.png" alt="David" class="profile-pic" />
+                    David
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="faq-header">
+        <h1>FREQUENTLY ASKED QUESTIONS</h1>
+      </div>
+      <div class="faq-container">
+        <div class="faq-item">
+          <input type="checkbox" id="faq1" />
+          <label class="faq-title" for="faq1">How do I log my workouts?</label>
+          <div class="faq-content">
+            <p>
+              You can easily log your workouts by selecting the exercise,
+              entering the duration, and tracking your reps.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <input type="checkbox" id="faq2" />
+          <label class="faq-title" for="faq2"
+            >Can I track my calories burned?</label
+          >
+          <div class="faq-content">
+            <p>
+              Yes, you can track calories burned through the application
+              integrated tracking features.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <input type="checkbox" id="faq3" />
+          <label class="faq-title" for="faq3"
+            >Is this application suitable for beginners?</label
+          >
+          <div class="faq-content">
+            <p>
+              Yes, you can track calories burned through the application
+              integrated tracking features.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <input type="checkbox" id="faq4" />
+          <label class="faq-title" for="faq4"
+            >What features does the application offer?</label
+          >
+          <div class="faq-content">
+            <p>
+              Absolutely! GymFluencer is designed to be user-friendly and
+              suitable for all fitness levels.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <input type="checkbox" id="faq5" />
+          <label class="faq-title" for="faq5"
+            >How can I reset my password?</label
+          >
+          <div class="faq-content">
+            <p>
+              You can reset your password by going to the login screen selecting
+              "Forgot Password".
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="logo-section">
+          <img src="logo.svg" alt="GymFluencer Logo" class="logo" />
+          <p>Where Fitness Meets Social Connection!</p>
+          <button class="email-button">
+            <span>&#9993;</span> hello@gym.birlaventures.com
+          </button>
+        </div>
+
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <span>&middot;</span>
+          <a href="#">Workout Plan</a>
+          <span>&middot;</span>
+          <a href="#">Diet Plan</a>
+          <span>&middot;</span>
+          <a href="#">FAQ's</a>
+        </div>
+
+        <!-- Line Separator -->
+        <div class="separator"></div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 GymFluencer. All rights reserved.</p>
+          <div class="social-icons">
+            <a href="#"><img src="linkedin.png" alt="LinkedIn" /></a>
+            <a href="#"><img src="twitter.png" alt="Twitter" /></a>
+            <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+      function openVideo() {
+        const videoModal = document.getElementById("videoModal");
+        const youtubeVideo = document.getElementById("youtubeVideo");
+        // Use embed format for YouTube video
+        youtubeVideo.src =
+          "https://www.youtube.com/embed/pznrAWMhahA?autoplay=1";
+        videoModal.style.display = "block";
+      }
+
+      function closeVideo() {
+        const videoModal = document.getElementById("videoModal");
+        const youtubeVideo = document.getElementById("youtubeVideo");
+        youtubeVideo.src = ""; // Stop the video when the modal is closed
+        videoModal.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1639 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap");
+
+/* General Styles */
+body {
+  margin: 0;
+  padding-top: 0; /* Remove any extra padding at the top */
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: #000000 url("gym-bg.jpg") no-repeat center center/cover;
+}
+html,
+body {
+  overflow-x: hidden; /* Disables horizontal scrolling */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  width: 100%; /* Ensure full width */
+  scroll-behavior: smooth;
+}
+
+h1,
+.logo,
+nav a,
+.join-btn {
+  font-family: "Orbitron", sans-serif;
+}
+
+p {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400; /* Adjust weight as needed */
+  line-height: 1.6; /* Improve readability */
+}
+
+/* Centered Floating Navbar */
+.navbar {
+  position: fixed;
+  top: 20px; /* Adds a 20px gap from the top */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9); /* Reduced opacity to make background image slightly visible */
+  padding: 1rem 10rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  gap: 2.5rem;
+  max-width: 800px;
+  white-space: nowrap;
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Faint white border */
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: red;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 9rem; /* Set SVG width similar to the font size */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 0.5rem; /* Add some space between the logo and text */
+}
+
+.logo span {
+  font-size: 1rem; /* Reduced size */
+  color: #fff; /* Made span text white */
+}
+
+/* Navigation Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7); /* Reduced opacity of navbar options */
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+  color: red;
+  transform: scale(1.1);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Dropdown below the parent link */
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 0;
+  min-width: 150px;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+.dropdown-menu a {
+  color: #fff;
+  font-size: 1rem;
+  display: block;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background: red;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Join Button */
+.join-btn {
+  position: relative; /* Ensure the pseudo-element is positioned relative to the button */
+  background: red;
+  color: #fff;
+  border: none;
+  padding: 1rem; /* Equal padding for top and bottom */
+  width: fit-content; /* Adjust button width to fit the text */
+  min-width: 10rem; /* Ensure the button doesn't shrink too much */
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-align: center; /* Center the text horizontally */
+  white-space: nowrap;
+  transition: background 0.3s, transform 0.2s;
+  overflow: hidden; /* Ensure the shine effect doesn't overflow the button */
+  display: inline-flex; /* Use flexbox for better alignment */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+}
+
+.join-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start off-screen */
+  width: 10%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: skewX(-30deg); /* Create the shine angle */
+  transition: left 0.5s ease-in-out; /* Smooth movement transition */
+}
+
+.join-btn:hover {
+  background: darkred;
+  transform: scale(1.05);
+}
+
+.join-btn:hover::before {
+  left: 100%; /* Move the shine effect to the right */
+}
+
+.join-btn:not(:hover)::before {
+  left: -100%; /* Move the shine effect back to the left */
+  transition: left 0.5s ease-in-out; /* Smooth movement back to the start */
+}
+
+
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 2rem; /* Padding for internal space */
+  height: 80vh; /* Full viewport height */
+  background: url("herotrust.png");
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Set the position relative for overlay */
+}
+
+.hero::before {
+  content: ""; /* Create an empty pseudo-element */
+  position: absolute; /* Position absolutely over the image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  z-index: 0; /* Set the overlay behind the content */
+}
+
+.hero h1,
+.hero p,
+.hero .trusted {
+  position: relative; /* Make sure the text is above the overlay */
+  z-index: 1; /* Set text and content above the overlay */
+}
+
+.hero .trusted {
+  margin-top: 150px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  display: inline-flex; /* To align image and text side by side */
+  align-items: center; /* Vertically center the items */
+  background-color: rgba(38, 34, 34, 0.9); /* Slightly transparent background */
+  padding: 0.5rem 1rem; /* Add padding inside the box */
+  border-radius: 30px; /* Rounded corners for the box */
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400; /* Adjust weight as needed */
+  line-height: 1.6;
+  color: white;
+}
+
+.trusted {
+  text-align: left;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.trusted-images {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.trusted-images img {
+  width: 60px; /* Adjust size as needed */
+  height: auto;
+  margin-left: -25px; /* Overlap the images */
+  border-radius: 50%; /* Optional: Make them circular */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add some shadow for better visuals */
+}
+
+.trusted-images img:first-child {
+  margin-left: 0; /* Ensure the first image starts at the container's edge */
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 4rem; /* Increased font size */
+  font-weight: bold;
+  color: red;
+  margin: 0.5rem 0;
+}
+
+p {
+  font-size: 1.2rem;
+  width: 60%;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* Mission Section */
+.mission {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: black; /* Set background to black */
+}
+
+.mission h2 {
+  font-size: 4rem;
+  color: red;
+  font-weight: 700; /* Increased font weight */
+  margin: 0.01rem 0;
+  font-family: "Orbitron", sans-serif; /* Change to Orbitron font */
+}
+
+.mission .stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.mission .stat {
+  text-align: center;
+  padding: 1rem; /* Optional padding for better spacing */
+}
+
+.mission .stat h3 {
+  font-size: 3.5rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+  color: #dadada;
+  transition: color 0.3s ease-in-out;
+}
+
+
+
+.mission .stat p {
+  font-size: 0.9rem; /* Smaller font size */
+  opacity: 0.6; /* Less opacity */
+}
+
+/* Add vertical lines between stat sections */
+.mission .stat:not(:last-child) {
+  border-right: 2px solid rgba(255, 255, 255, 0.3); /* Adjust the color and opacity of the line */
+  padding-right: 2rem; /* Adds space between text and vertical line */
+}
+
+/* Optional: Add a hover effect to the stats */
+.mission .stat:hover {
+  opacity: 0.8; /* Slight increase in opacity when hovered */
+  transform: scale(1.05); /* Slight scaling on hover */
+  transition: opacity 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.mission .video-thumbnail-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  overflow: hidden; /* Keeps the overlay within the bounds of the thumbnail */
+  cursor: pointer;
+}
+
+.mission .video-thumbnail {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.mission .video-thumbnail-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Black overlay with transparency */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.mission .video-thumbnail-wrapper:hover .video-thumbnail {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.mission .video-thumbnail-wrapper:hover::before {
+  opacity: 1; /* Make the overlay visible on hover */
+}
+
+/* Modal styling */
+.mission .modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000; /* Ensures the modal appears above other content */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.mission .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Services Section */
+.services {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: black; /* Set background to black */
+}
+
+.services h2 {
+  font-size: 2rem;
+  color: red;
+  font-family: "Orbitron", sans-serif; /* Change to Orbitron font */
+}
+
+.mission .services p {
+  text-align: justify; /* Justify the text */
+  font-size: 1rem; /* Adjust font size as needed */
+  line-height: 1.6; /* Adjust line height for readability */
+}
+
+.services .service-images {
+  display: flex;
+  justify-content: space-between; /* Ensure images span full width with no extra space */
+  margin-top: 2rem;
+  gap: 0; /* Remove any gap between the images */
+  padding: 0; /* Remove any padding that might add extra space */
+  margin: 0; /* Remove any margin that might add extra space */
+}
+
+.services .service-images .service-link {
+  display: block; /* Ensure the links take up the image space */
+  width: calc(
+    100% / 5
+  ); /* Dynamically divide the width evenly among 5 images */
+  overflow: hidden; /* Ensure no overflow outside the link bounds */
+  padding: 0; /* Remove any padding that might add extra space */
+  margin: 0; /* Remove any margin that might add extra space */
+  position: relative; /* To position the text on top of the images */
+}
+
+.services .service-images img {
+  width: 100%; /* Image takes full width of its parent */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Prevent inline gaps */
+  transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+  margin: 0;
+  padding: 0;
+}
+
+.services .service-images img:hover {
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.service-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: "Orbitron", sans-serif;
+  transform: translate(-50%, -50%);
+  color: white; /* Change text color */
+  font-size: 1.5em; /* Adjust font size */
+  font-weight: bold; /* Make text bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional text shadow for better visibility */
+}
+
+/* Benefits Section */
+.benefits {
+  padding: 4rem 2rem;
+  background-color: black;
+  text-align: center;
+}
+
+.benefits h2 {
+  margin-top: 1rem;
+  font-size: 3rem;
+  color: red;
+  font-family: "Orbitron", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.benefits p {
+  font-size: 0.9rem; /* Reduce font size */
+  opacity: 0.9; /* Decrease opacity */
+}
+
+/* Star Benefits */
+.benefits .star-benefits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.benefits .star-benefits .star-symbol {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  align-items: center;
+  background-color: rgba(80, 79, 79, 0.3); /* Slightly transparent background */
+  padding: 0.8rem 1rem;
+  border-radius: 30px; /* Rounded corners for the box */
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Benefits Blocks */
+.benefits-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.benefit-block {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 12px;
+  width: 45%;
+  min-width: 280px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-block .icon {
+  font-size: 40px;
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.benefit-block h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.benefit-block p {
+  font-size: 16px;
+  color: #555;
+}
+
+.benefit-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  max-width: 400px;
+  margin: 0 20px;
+}
+
+.benefit-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* YOUR PERSONALISED FITNESS HUB Section */
+.personalized-fitness {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 20px;
+  background: url("benefits.png") no-repeat center center; /* Ensure the image is centered */
+  background-size: contain; /* Zoom out the background image so it's completely visible */
+  gap: 20px;
+}
+
+.left-side {
+  flex: 1;
+  text-align: left;
+}
+
+.left-side h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: red;
+  font-weight: bold;
+  font-family: "Orbitron", sans-serif;
+  margin-left: 100px;
+}
+
+.left-side p {
+  font-size: 15px;
+  color: #fbfafa;
+  margin-bottom: 20px;
+  font-family: "Space Grotesk", sans-serif;
+  margin-left: 100px;
+}
+
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-side .video-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.right-side .video-placeholder p {
+  color: #888;
+  font-size: 18px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .hero .trusted {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .services .service-images {
+    flex-direction: column;
+  }
+
+  .services .service-images img {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+
+  .benefits-blocks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefit-block {
+    width: 80%;
+  }
+
+  .benefit-image {
+    margin-top: 30px;
+    width: 80%;
+  }
+
+  .personalized-fitness {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-side {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .mission h2,
+  .services h2,
+  .benefits h2 {
+    font-size: 2rem;
+  }
+
+  .mission .stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .mission .stat {
+    font-size: 1.2rem;
+  }
+}
+
+.right-side {
+  position: relative;
+  transform: translateX(-50px); /* Move left by 50px */
+}
+
+.carousel-container {
+  position: relative; /* For positioning child elements */
+  width: 80%; /* Adjust to your desired width */
+  height: 400px; /* Adjust height as needed */
+  overflow: hidden; /* Hide overflow to create the carousel effect */
+}
+
+.carousel-images {
+  position: relative; /* Allows absolute positioning of images */
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-image {
+  position: absolute; /* Stack images on top of each other */
+  top: 0;
+  left: 0;
+  width: 100%; /* Make images fill the container */
+  height: 100%; /* Maintain container's height */
+  opacity: 0; /* Hide images by default */
+  transition: opacity 1s ease; /* Smooth transition effect */
+}
+
+.carousel-image.active {
+  opacity: 1; /* Show the active image */
+  z-index: 1; /* Ensure active image appears on top */
+}
+
+/* TRANSFORMATIONS MADE POSSIBLE WITH GYMFLUENCER Section */
+.transformations {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #000000; /* Light background color */
+}
+
+.transformations h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: Orbitron, sans-serif;
+  color: red; /* Dark text color */
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px; /* Space between images */
+  padding: 20px;
+}
+
+.carousel img {
+  width: 300px; /* Fixed width for images */
+  height: auto;
+  scroll-snap-align: center;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-image {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+}
+.carousel.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.text-scroller {
+  background-color: #000; /* Black background */
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* Hide overflowing text */
+}
+
+.text-line {
+  position: relative;
+  width: 100%; /* Ensures full-width scrolling */
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+.text-blue,
+.text-orange {
+  display: inline-block;
+  font-size: 55px;
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+  padding: 0;
+  animation-duration: 16s; /* Animation duration */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.text-blue {
+  color: white;
+  animation-name: scroll-left-to-right;
+}
+
+.text-orange {
+  color: red;
+  opacity: 0.6;
+  animation-name: scroll-right-to-left;
+}
+
+/* Keyframes for left-to-right scrolling */
+@keyframes scroll-left-to-right {
+  0% {
+    transform: translateX(-100%); /* Start off-screen to the left */
+  }
+  100% {
+    transform: translateX(100%); /* Move off-screen to the right */
+  }
+}
+
+/* Keyframes for right-to-left scrolling */
+@keyframes scroll-right-to-left {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Move off-screen to the left */
+  }
+}
+
+
+.text-line {
+  display: flex;
+  width: 100%; /* Full width for each line */
+  animation: scrollText 16s linear infinite;
+}
+
+/* Scrolling Text Section */
+.scrolling-text-section {
+  background-color: red;
+  padding: 10px 0; /* Narrow look */
+  text-align: center;
+  overflow: hidden; /* Hide overflow to ensure smooth scrolling */
+  position: relative; /* Ensure positioning for child elements */
+}
+
+.scrolling-text-container {
+  display: flex;
+  white-space: nowrap; /* Prevent text wrapping */
+  animation: scroll-left 20s linear infinite; /* Apply scrolling animation */
+}
+
+.scrolling-text {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Space Grotesk", sans-serif;
+  display: inline-block; /* Ensure the text is inline */
+  padding: 0; /* Remove any padding */
+  margin: 0; /* Remove any margin */
+}
+
+.scrolling-text-container::after {
+  content: attr(data-text); /* Duplicate the content for seamless scrolling */
+  display: inline-block;
+  font-family: 'Space Grotesk', sans-serif;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Space Grotesk", sans-serif;
+  display: inline-block; /* Ensure the text is inline */
+  padding: 0; /* Remove any padding */
+  margin-left: 2px;
+}
+
+.dot-icon {
+  margin: 0 10px;
+}
+
+/* Keyframes for the scrolling effect */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0); /* Start at the initial position */
+  }
+  100% {
+    transform: translateX(-100%); /* Scroll completely to the left */
+  }
+}
+
+
+/* Basic styling for the transformation section */
+.transformations {
+  padding: 50px 0;
+  text-align: center;
+  /* background: url('gymlogo.png') no-repeat center left; */
+  background-size: 100px 100px;
+}
+
+.transformations h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Carousel container */
+.carousel {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 80%; /* Adjust width as needed */
+  margin: 0 auto; /* Center the carousel */
+}
+
+/* Styling for the carousel images */
+.carousel-img {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Left and right arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.carousel-arrow-left {
+  left: 10px;
+}
+
+.carousel-arrow-right {
+  right: 10px;
+}
+
+/* Optional: Add a simple hover effect for images */
+.carousel img:hover {
+  transform: scale(1.05);
+}
+
+/* Styling for the reviews section */
+.reviews {
+  margin-top: 0;
+  padding: 50px 0;
+  background: url("reviews.png") no-repeat center center; /* Ensure the image is centered */
+  background-size: 100% auto; /* Keep the width at 100%, adjust height automatically */
+  text-align: center;
+  position: relative;
+  height: 60vh; /* Adjust this height as needed to control how much the image is cropped */
+  overflow: hidden; /* Ensures no extra content causes scroll issues */
+}
+
+/* Adding a black low-opacity overlay */
+.reviews::before {
+  content: ""; /* Required for pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Black overlay with low opacity */
+  z-index: 1; /* Makes sure the overlay is on top of the background but behind the content */
+}
+
+/* Ensure the content inside the .reviews section appears above the overlay */
+.reviews > * {
+  position: relative;
+  z-index: 2;
+}
+
+.reviews h2 {
+  padding: 40px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-family: "Orbitron", sans-serif;
+  color: white;
+}
+
+/* Reviews container */
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+/* Wrapper to hold the review boxes */
+.reviews-wrapper {
+  display: flex;
+  white-space: nowrap;
+  animation: scrollReviews 20s linear infinite; /* Continuous scrolling effect */
+}
+
+/* Each review box */
+.review-box {
+  width: 450px; /* Box width */
+  height: 200px; /* Box height */
+  margin: 0 20px;
+  background-color: rgb(18, 17, 17);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent overflow of content */
+  padding: 0; /* Remove extra padding */
+}
+
+.review-image {
+  width: 150px;
+  height: 100%; /* Matches the height of the review box */
+  object-fit: cover; /* Ensures the image scales proportionally */
+  margin: 0; /* Remove any margin */
+  border-radius: 8px 0 0 8px; /* Optional rounded corners */
+}
+
+.review-content {
+  flex: 1; /* Take up the remaining space beside the image */
+  padding: 0 15px; /* Space around the text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the text vertically */
+  text-align: left; /* Align text to the left */
+  overflow: hidden; /* Ensure content does not overflow the box */
+}
+
+.review-text {
+  font-size: 0.8rem; /* Standard text size */
+  color: white; /* Neutral text color */
+  font-style: italic; /* Adds emphasis to the review text */
+  margin: 0; /* Remove unnecessary margin */
+  line-height: 1.4; /* Improves readability */
+  word-wrap: break-word; /* Ensures long words or URLs don't overflow */
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.review-stars {
+  display: flex;
+  justify-content: flex-start; /* Align stars to the left */
+  margin-bottom: 10px; /* Space below the stars */
+}
+
+.review-stars i {
+  color: red; /* Red color for stars */
+  margin-right: 5px; /* Space between stars */
+  font-size: 18px; /* Adjust size of stars */
+}
+
+/* Optional: Adjust star size for larger boxes */
+.review-box .review-stars i {
+  font-size: 20px;
+}
+
+.review-box .review-job {
+  font-size: 0.7rem;
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+  color: white;
+}
+/* User name styling */
+.review-box h4 {
+  font-size: 1rem;
+  color: white;
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Animation to make the reviews scroll continuously from right to left */
+@keyframes scrollReviews {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      -50%
+    ); /* Scroll halfway through to the end of the first set */
+  }
+}
+
+.container-benefits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Info Card styles */
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Space between cards */
+}
+
+.info-card {
+  background-color: #111; /* Darker card background */
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  text-align: left;
+}
+
+.info-card i {
+  font-size: 24px;
+  color: #fff;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.info-card h3 {
+  font-size: 18px;
+  font-family: "Orbitron", sans-serif;
+  color: #ff0000; /* Red title text */
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 14px;
+  color: #ddd; /* Light gray for description */
+  line-height: 1.6;
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+  width: 100%;
+}
+
+/* Phone Mockup styles */
+.phone-mockup {
+  position: relative;
+  width: 300px;
+  height: 600px;
+  background-color: #111; /* Mockup background */
+  border-radius: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.phone-mockup img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Scales the content to fit */
+  border-radius: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container-benefits {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .info-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .info-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+.gym-section {
+  padding: 40px 20px;
+}
+
+.gym-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gym-header h1 {
+  font-size: 18px;
+  color: #ff0000; /* Red title */
+  margin-bottom: 10px;
+}
+
+.gym-header p {
+  font-size: 16px;
+  color: #ddd;
+}
+
+/* Gym container */
+.gym-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.gym-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gym-card {
+  display: flex;
+  background-color: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  margin-left: 180px;
+  margin-right: 0px;
+  width: 70%;
+}
+
+.gym-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.gym-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.gym-info h3 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.gym-info p {
+  font-size: 14px;
+  margin: 0;
+  color: #ddd;
+}
+
+/* Map styles */
+.gym-map {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  height: 400px; /* Fixed height for map */
+  margin-right: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gym-container {
+    flex-direction: column;
+  }
+
+  .gym-map {
+    height: 300px;
+  }
+}
+
+.faq-section {
+  position: relative;
+  padding: 50px 20px;
+  background: url("faq.png") no-repeat center center fixed;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-header h1 {
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.faq-item input {
+  display: none;
+}
+
+.faq-title {
+  display: block;
+  background-color: rgba(139, 0, 0, 0.7); /* Dark red with 70% opacity */
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 11px;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-title:before {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-size: 11px;
+}
+
+.faq-item input:checked ~ .faq-title:before {
+  content: "×"; /* Change symbol when active */
+}
+
+.faq-content {
+  background-color: rgba(139, 0, 0, 0.5); /* Dark red with 70% opacity */
+  color: #fff;
+  padding: 15px 20px;
+
+  display: none;
+}
+
+.faq-content p {
+  width: 100%;
+  font-size: 11px;
+}
+.faq-item input:checked ~ .faq-content {
+  display: block;
+}
+
+/* Background Watermark */
+.faq-section:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("watermark.png"); /* Replace with your logo */
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.faq-section * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faq-title {
+    font-size: 16px;
+  }
+
+  .faq-content {
+    font-size: 14px;
+  }
+}
+
+.category1 {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.category2 {
+  display: inline-block;
+  background-color: orange;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.category3 {
+  display: inline-block;
+  background-color: green;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  color: red;
+  margin-bottom: 40px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.blog-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover img {
+  transform: scale(1.1);
+}
+
+.blog-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  color: white;
+  padding: 20px;
+  text-align: left;
+}
+
+.blog-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.blog-meta {
+  font-size: 0.8rem;
+  color: #aaa;
+  display: flex;
+  gap: 15px; /* Adjust spacing between meta items */
+}
+
+.blog-meta span {
+  display: flex;
+  align-items: center;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Custom calendar icon */
+.calendar-icon {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid currentColor;
+  border-radius: 2px;
+  margin-right: 5px;
+  position: relative;
+}
+
+.calendar-icon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  width: 6px;
+  height: 2px;
+  background: currentColor;
+}
+
+/* Profile pictures */
+.profile-pic {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin-right: 5px;
+  object-fit: cover; /* Ensure image fits within the circle */
+}
+
+
+.large-blog {
+  grid-row: span 2;
+}
+
+.small-blogs {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-section {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 150px; /* Increase width to make the logo larger */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px;
+}
+
+
+.logo-section h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.logo-section p {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  opacity: 0.7;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.email-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 17px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.email-button:hover {
+  background-color: #444;
+}
+
+.nav-links {
+  margin: 20px 0;
+  font-family: 'Orbitron', sans-serif;
+  opacity: 0.7;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0 5px;
+}
+
+.nav-links span {
+  color: #aaa;
+}
+
+.separator {
+  margin: 20px auto;
+  width: 60%; /* Adjust the width of the line as needed */
+  height: 1px;
+  background-color: #555;
+  opacity: 0.7;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.5rem;
+  color: #aaa;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 70px; /* Reduced gap between elements */
+  opacity: 0.7;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.footer-bottom p {
+  margin-left: -70px;
+  font-size: 0.8rem;
+}
+
+.social-icons {
+  margin-right: 200px; /* Adjust this value to position icons further left */
+  margin-top: 0; /* Ensure no extra vertical margin is applied */
+}
+
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+

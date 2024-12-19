@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap");
+
+/* styles.css */
+body {
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+  }
+  
+
+  h1,
+.logo,
+nav a,
+.join-btn {
+  font-family: "Orbitron", sans-serif;
+}
+
+p {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400; /* Adjust weight as needed */
+  line-height: 1.6; /* Improve readability */
+}
+
+/* Centered Floating Navbar */
+.navbar {
+  position: fixed;
+  top: 20px; /* Adds a 20px gap from the top */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9); /* Reduced opacity to make background image slightly visible */
+  padding: 1rem 10rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  gap: 2.5rem;
+  max-width: 800px;
+  white-space: nowrap;
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Faint white border */
+}
+
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: red;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 9rem; /* Set SVG width similar to the font size */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 0.5rem; /* Add some space between the logo and text */
+}
+
+.logo span {
+  font-size: 1rem; /* Reduced size */
+  color: #fff; /* Made span text white */
+}
+
+/* Navigation Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7); /* Reduced opacity of navbar options */
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+  color: red;
+  transform: scale(1.1);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Dropdown below the parent link */
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 0;
+  min-width: 150px;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+.dropdown-menu a {
+  color: #fff;
+  font-size: 1rem;
+  display: block;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background: red;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Join Button */
+.join-btn {
+  position: relative; /* Ensure the pseudo-element is positioned relative to the button */
+  background: red;
+  color: #fff;
+  border: none;
+  padding: 1rem; /* Equal padding for top and bottom */
+  width: fit-content; /* Adjust button width to fit the text */
+  min-width: 10rem; /* Ensure the button doesn't shrink too much */
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-align: center; /* Center the text horizontally */
+  white-space: nowrap;
+  transition: background 0.3s, transform 0.2s;
+  overflow: hidden; /* Ensure the shine effect doesn't overflow the button */
+  display: inline-flex; /* Use flexbox for better alignment */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+}
+
+.join-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start off-screen */
+  width: 10%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: skewX(-30deg); /* Create the shine angle */
+  transition: left 0.5s ease-in-out; /* Smooth movement transition */
+}
+
+.join-btn:hover {
+  background: darkred;
+  transform: scale(1.05);
+}
+
+.join-btn:hover::before {
+  left: 100%; /* Move the shine effect to the right */
+}
+
+.join-btn:not(:hover)::before {
+  left: -100%; /* Move the shine effect back to the left */
+  transition: left 0.5s ease-in-out; /* Smooth movement back to the start */
+}
+
+.container{
+  margin-top: 150px;;
+}
+  .intro h1, .features h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ff0000;
+    margin: 0;
+  }
+  
+  .intro h1 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .features h2 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+  }
+  
+  p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 1rem auto;
+  }
+  
+  .features-grid {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;    
+    gap: 1rem;
+    margin-left: -40px;
+
+  }
+  
+  .feature-item {
+    text-align: center;
+  }
+  
+  .icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(100, 1, 1, 0.753);
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem;
+    overflow: hidden; /* Ensures the vector image stays within the circle */
+  }
+  
+  .icon img {
+    width: 30px; /* Scales the vector image to fit */
+    height: 30px;
+    object-fit: contain; /* Ensures the aspect ratio is preserved */
+  }
+  
+  
+  .feature-item p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  

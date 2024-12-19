@@ -1,0 +1,827 @@
+/* Background */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 30px;
+gap: 30px;
+isolation: isolate;
+
+position: absolute;
+height: 292px;
+left: 100px;
+right: 992.8px;
+top: 286px;
+
+/* gymfluencer.framer.website/Woodsmoke */
+background: #09090A;
+border-radius: 20px;
+
+
+/* Background */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 14px;
+isolation: isolate;
+
+width: 58px;
+height: 58px;
+
+/* gymfluencer.framer.website/Woodsmoke */
+background: #1A1A1A;
+border-radius: 14px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* AjjAxBc5v6SZHOkJzG2bwrSMk.svg */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 30px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+z-index: 0;
+
+
+/* AjjAxBc5v6SZHOkJzG2bwrSMk.svg fill */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 30px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 1 */
+
+width: 30px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 0.39%;
+right: 0.38%;
+top: 17.17%;
+bottom: 18.63%;
+
+/* gymfluencer.framer.website/White */
+background: #FFFFFF;
+
+
+/* Border */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* gymfluencer.framer.website/Shark */
+border: 1px solid #28282C;
+border-radius: 14px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Heading 3 → Effortless Workout Logging */
+
+width: 339px;
+height: 33px;
+
+/* gymfluencer.framer.website/Semantic/Heading 3 */
+font-family: 'Orbitron';
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 33px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+
+/* gymfluencer.framer.website/Red */
+color: #EB0000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Easily log your workouts and monitor your progress over time with our intuitive logging feature. */
+
+width: 366px;
+height: 81px;
+
+/* gymfluencer.framer.website/Space Grotesk/Medium */
+font-family: 'Space Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+/* or 150% */
+display: flex;
+align-items: center;
+
+/* gymfluencer.framer.website/Manatee */
+color: #96979C;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Border */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: -4.86%;
+
+/* gymfluencer.framer.website/Shark */
+border: 1px solid #1D1D20;
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+z-index: 3;
+
+
+/* Background */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 30px;
+gap: 30px;
+isolation: isolate;
+
+position: absolute;
+height: 292px;
+left: 100px;
+right: 992.8px;
+top: 574px;
+
+/* gymfluencer.framer.website/Woodsmoke */
+background: #09090A;
+border-radius: 20px;
+
+
+/* Background */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 14px;
+isolation: isolate;
+
+width: 58px;
+height: 58px;
+
+/* gymfluencer.framer.website/Woodsmoke */
+background: #1A1A1A;
+border-radius: 14px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* rxSlFR0RyaC3WCayigHX4RPQZs.svg */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 30px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+z-index: 0;
+
+
+/* rxSlFR0RyaC3WCayigHX4RPQZs.svg fill */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 30px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 1 */
+
+width: 30px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 7.81%;
+right: 7.81%;
+top: 7.81%;
+bottom: 7.81%;
+
+/* gymfluencer.framer.website/White */
+background: #FFFFFF;
+
+
+/* Border */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* gymfluencer.framer.website/Shark */
+border: 1px solid #28282C;
+border-radius: 14px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Heading 3 → Accurate Rep Counting */
+
+width: 285px;
+height: 33px;
+
+/* gymfluencer.framer.website/Semantic/Heading 3 */
+font-family: 'Orbitron';
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 33px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+
+/* gymfluencer.framer.website/Red */
+color: #EB0000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Count your reps accurately with our app, ensuring consistency and improved performance. */
+
+width: 362px;
+height: 81px;
+
+/* gymfluencer.framer.website/Space Grotesk/Medium */
+font-family: 'Space Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+/* or 150% */
+display: flex;
+align-items: center;
+
+/* gymfluencer.framer.website/Manatee */
+color: #96979C;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Border */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: -4.86%;
+
+/* gymfluencer.framer.website/Shark */
+border: 1px solid #1D1D20;
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+z-index: 3;
+
+
+/* Container */
+
+position: absolute;
+height: 642px;
+left: 546.4px;
+right: 546.4px;
+top: 286px;
+
+
+
+/* Container */
+
+position: absolute;
+left: 58.7px;
+right: 58.7px;
+top: 0px;
+bottom: 31.14px;
+
+
+
+/* I9yRU9jEN2S2ol2M7kgT5c6zOrc.png */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: url(.png);
+
+
+/* 1UO4LCYbX6UQvXFCBXLY0dAOHU.png */
+
+position: absolute;
+left: 14px;
+right: 14px;
+top: 10px;
+bottom: 10px;
+
+background: url(.jpg);
+border-radius: 32px;
+
+
+/* Background */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 14px;
+isolation: isolate;
+
+width: 58px;
+height: 58px;
+
+/* gymfluencer.framer.website/Woodsmoke */
+background: #1A1A1A;
+border-radius: 14px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* pvxqwt0ZG86WIRPPnHxDCgV7rkQ.svg */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 30px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+z-index: 0;
+
+
+/* pvxqwt0ZG86WIRPPnHxDCgV7rkQ.svg fill */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 30px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 1 */
+
+width: 31px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 4.88%;
+right: 4.38%;
+top: 1.56%;
+bottom: 4.68%;
+
+/* gymfluencer.framer.website/White */
+background: #FFFFFF;
+
+
+/* Border */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* gymfluencer.framer.website/Shark */
+border: 1px solid #28282C;
+border-radius: 14px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Heading 3 → Personalized Workout Plans */
+
+width: 349px;
+height: 33px;
+
+/* gymfluencer.framer.website/Semantic/Heading 3 */
+font-family: 'Orbitron';
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 33px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+
+/* gymfluencer.framer.website/Red */
+color: #EB0000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* AI-powered workout plans tailored to your fitness level, goals, and progress. */
+
+width: 334px;
+height: 54px;
+
+/* gymfluencer.framer.website/Space Grotesk/Medium */
+font-family: 'Space Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+/* or 150% */
+display: flex;
+align-items: center;
+
+/* gymfluencer.framer.website/Manatee */
+color: #96979C;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Border */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: -6.97%;
+
+/* gymfluencer.framer.website/Shark */
+border: 1px solid #1D1D20;
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+z-index: 3;
+
+
+/* Background */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 14px;
+isolation: isolate;
+
+width: 58px;
+height: 58px;
+
+/* gymfluencer.framer.website/Woodsmoke */
+background: #1A1A1A;
+border-radius: 14px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* u8fjSIAgWQzhagulXkIoN7PzI.svg */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 30px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+z-index: 0;
+
+
+/* u8fjSIAgWQzhagulXkIoN7PzI.svg fill */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 30px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Component 1 */
+
+width: 31px;
+height: 30px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Vector */
+
+position: absolute;
+left: 7.96%;
+right: 10.42%;
+top: 7.81%;
+bottom: 7.81%;
+
+/* gymfluencer.framer.website/White */
+background: #FFFFFF;
+
+
+/* Border */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+/* gymfluencer.framer.website/Shark */
+border: 1px solid #28282C;
+border-radius: 14px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Heading 3 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 0.7px;
+
+width: 366.4px;
+height: 54.7px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Calorie Calculation & Personalized Diet Plans */
+
+width: 366.4px;
+height: 54px;
+
+/* gymfluencer.framer.website/Semantic/Heading 3 */
+font-family: 'Orbitron';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+/* or 150% */
+display: flex;
+align-items: center;
+
+/* gymfluencer.framer.website/Red */
+color: #EB0000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Calculate calories burned during workouts and AI-customized meal plans for optimal nutrition and wellness  */
+
+width: 351px;
+height: 81px;
+
+/* gymfluencer.framer.website/Space Grotesk/Medium */
+font-family: 'Space Grotesk';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+/* or 150% */
+display: flex;
+align-items: center;
+
+/* gymfluencer.framer.website/Manatee */
+color: #96979C;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Border */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: -3.55%;
+
+/* gymfluencer.framer.website/Shark */
+border: 1px solid #1D1D20;
+border-radius: 20px;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+z-index: 3;
